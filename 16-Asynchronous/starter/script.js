@@ -5,23 +5,9 @@ const countriesContainer = document.querySelector('.countries');
 
 ///////////////////////////////////////
 // AJAX Call
-const request = new XMLHttpRequest();
-const country = 'Canada';
-request.open('GET', `https://restcountries.com/v3.1/name/${country}`);
-request.send();
 
-request.addEventListener('load', function () {
-  let data = JSON.parse(this.responseText);
-
-  if (data.length == 1) {
-    [data] = JSON.parse(this.responseText);
-  } else {
-    data = data.filter(ele => ele.name.common == country);
-  }
-
-  console.log(data);
-
-  const html = `<article class="country">
+function renderCountry(data, className = '') {
+  const html = `<article class="country ${className}">
 <img class="country__img" src="${data.flags.png}" />
 <div class="country__data">
   <h3 class="country__name">${data.name.common}</h3>
@@ -36,4 +22,30 @@ request.addEventListener('load', function () {
 
   countriesContainer.insertAdjacentHTML('beforeend', html);
   countriesContainer.style.opacity = 1;
-});
+}
+
+function getCountryData(country, APIurl) {
+  fetch(APIurl)
+    .then(response => response.json())
+    .then(data => {
+      if (data.length !== 1) {
+        data = data.filter(ele => ele.name.common == country);
+      }
+
+      console.log(data);
+      return data[0];
+    })
+    .then(data => {
+      renderCountry(data);
+      const neighbour = data.borders[0];
+      if (!neighbour) return;
+      const neightbourAPIurl = `https://restcountries.com/v3.1/alpha/${neighbour}`;
+      return fetch(neightbourAPIurl);
+    })
+    .then(response => response.json())
+    .then(data => renderCountry(data[0], 'neighbour'));
+}
+
+const country = 'Japan';
+const APIurl = `https://restcountries.com/v3.1/name/${country}`;
+getCountryData(country, APIurl);
