@@ -26,26 +26,32 @@ function renderCountry(data, className = '') {
 
 function getCountryData(country, APIurl) {
   fetch(APIurl)
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) throw new Error('Something went wrong');
+      return response.json();
+    })
     .then(data => {
       if (data.length !== 1) {
         data = data.filter(ele => ele.name.common == country);
       }
 
       console.log(data);
-      return data[0];
-    })
-    .then(data => {
-      renderCountry(data);
-      const neighbour = data.borders[0];
+
+      renderCountry(data[0]);
+      const neighbour = data[0].borders[0];
       if (!neighbour) return;
       const neightbourAPIurl = `https://restcountries.com/v3.1/alpha/${neighbour}`;
       return fetch(neightbourAPIurl);
     })
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) throw new Error('Something went wrong');
+      return response.json();
+    })
     .then(data => renderCountry(data[0], 'neighbour'));
 }
 
-const country = 'Japan';
-const APIurl = `https://restcountries.com/v3.1/name/${country}`;
-getCountryData(country, APIurl);
+btn.addEventListener('click', () => {
+  const country = 'afa';
+  const APIurl = `https://restcountries.com/v3.1/name/${country}`;
+  getCountryData(country, APIurl);
+});
