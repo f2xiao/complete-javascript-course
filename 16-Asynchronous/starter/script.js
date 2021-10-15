@@ -33,8 +33,11 @@ function renderError(errMsg) {
 }
 
 function getJSON(APIurl) {
-  fetch(APIurl).then(response => {
-    if (!response.ok) throw new Error('can not find the country');
+  return fetch(APIurl).then(response => {
+    console.log(response);
+    if (!response.ok)
+      throw new Error(`can not find the country ${response.status}`);
+
     return response.json();
   });
 }
@@ -52,18 +55,26 @@ function getCountryData(country, APIurl) {
       }
 
       console.log(data);
+      if (!data[0]) throw new Error(`No country found`);
 
       renderCountry(data[0]);
       const neighbour = data[0].borders[0];
-      if (!neighbour) return;
+      // const neighbour = '';
+      console.log(neighbour);
+      if (!neighbour) throw new Error(`No neighbour found`);
       const neightbourAPIurl = `https://restcountries.com/v3.1/alpha/${neighbour}`;
-      return fetch(neightbourAPIurl);
+      return getJSON(neightbourAPIurl);
     })
-    .then(response => {
-      if (!response.ok) throw new Error('Something went wrong');
+    /* .then(response => {
+      console.log(response);
+      if (!response.ok)
+        throw new Error(`can not find the country ${response.status}`);
       return response.json();
+    }) */
+    .then(data => {
+      console.log(data[0]);
+      renderCountry(data[0], 'neighbour');
     })
-    .then(data => renderCountry(data[0], 'neighbour'))
     .catch(error => {
       console.error(`${error} 💥💥💥`);
       renderError(`💥💥oh no, ${error.message} 💥💥`);
@@ -71,7 +82,7 @@ function getCountryData(country, APIurl) {
 }
 
 btn.addEventListener('click', () => {
-  const country = 'aaa';
+  const country = '';
   const APIurl = `https://restcountries.com/v3.1/name/${country}`;
   getCountryData(country, APIurl);
 });
