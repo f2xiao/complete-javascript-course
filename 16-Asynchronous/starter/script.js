@@ -81,11 +81,11 @@ function getCountryData(country, APIurl) {
     });
 }
 
-btn.addEventListener('click', () => {
-  const country = '';
+/* btn.addEventListener('click', () => {
+  const country = 'China';
   const APIurl = `https://restcountries.com/v3.1/name/${country}`;
   getCountryData(country, APIurl);
-});
+}); */
 
 ///////////////////////////////////////
 // Coding Challenge #1
@@ -108,3 +108,34 @@ TEST COORDINATES 2: 19.037, 72.873
 TEST COORDINATES 2: -33.933, 18.474
 GOOD LUCK 😀
 */
+
+const whereAmI = (lat, lng) => {
+  return fetch(
+    `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`
+  )
+    .then(response => {
+      console.log(response);
+      return response.json();
+    })
+    .then(data => {
+      console.log(data);
+      // const { city, country } = data.address;
+      /*  countriesContainer.insertAdjacentHTML(
+        'beforeend',
+        `You are in ${city}, ${country}`
+      );
+      renderCountry(country); */
+      return data.address;
+    })
+    .catch(error => {
+      console.log(error);
+    });
+};
+
+btn.addEventListener('click', () => {
+  whereAmI(52.508, 13.381).then(data => {
+    const { city, country } = data;
+    console.log(`You are in ${city}, ${country}`);
+    getCountryData(country, `https://restcountries.com/v3.1/name/${country}`);
+  });
+});
