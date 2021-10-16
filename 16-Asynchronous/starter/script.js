@@ -115,7 +115,7 @@ const whereAmI = (lat, lng) => {
     `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`
   )
     .then(response => {
-      console.log(response);
+      if (!response.ok) throw new Error('Position not found');
       return response.json();
     })
     .then(data => {
@@ -129,7 +129,8 @@ const whereAmI = (lat, lng) => {
       return data.address;
     })
     .catch(error => {
-      console.log(error);
+      console.error(`${error}`);
+      renderError(`💥💥💥${error.message}💥💥💥`);
     });
 };
 
@@ -141,6 +142,41 @@ const whereAmI = (lat, lng) => {
   });
 });
  */
+
+///////////////////////////////////////
+// Promisifying the Geolocation API
+
+/* navigator.geolocation.getCurrentPosition(
+  position => {
+    console.log(position);
+    const { latitude: lat, longitude: lng } = position.coords;
+    console.log(lat, lng);
+  },
+  error => {
+    console.log(error);
+  }
+); */
+
+const getPosition = function () {
+  return new Promise((resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
+
+btn.addEventListener('click', () => {
+  getPosition()
+    .then(position => {
+      // console.log(position);
+      const { latitude: lat, longitude: lng } = position.coords;
+      return whereAmI(lat, lng);
+    })
+    .then(data => {
+      const { city, country } = data;
+      console.log(`You are in ${city}, ${country}`);
+      getCountryData(country, `https://restcountries.com/v3.1/name/${country}`);
+    });
+});
+
 ///////////////////////////////////////
 // Coding Challenge #2
 
@@ -202,7 +238,7 @@ const wait = function (seconds) {
 //     console.log('2s has passed');
 //   });
 
-createImage(`./img/img-1.jpg`)
+/* createImage(`./img/img-1.jpg`)
   .then(img => {
     currentImg = img;
     return wait(2);
@@ -229,3 +265,4 @@ createImage(`./img/img-1.jpg`)
   .catch(error => {
     images.insertAdjacentHTML('beforeend', `ohhh no 💥💥💥${error.message}`);
   });
+ */
