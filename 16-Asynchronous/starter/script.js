@@ -266,3 +266,32 @@ const wait = function (seconds) {
     images.insertAdjacentHTML('beforeend', `ohhh no 💥💥💥${error.message}`);
   });
  */
+console.log(typeof Promise);
+console.log(Promise.prototype);
+// whereAmI is anonymous function
+console.log(typeof whereAmI);
+console.log(whereAmI.prototype);
+console.log(typeof getPosition);
+console.log(getPosition.prototype);
+const testPromise = new Promise(function (resolve, reject) {
+  if (Math.random() > 0.5) {
+    resolve('Congragulation 🎁');
+  } else {
+    reject('Sorry 💥');
+  }
+});
+
+// console.log(typeof testPromise);
+// console.log(testPromise.prototype);
+testPromise
+  .then(res => {
+    console.log(res);
+    return testPromise;
+  })
+  .then(res => {
+    console.log(res);
+  })
+  .catch(err => {
+    console.error(`${err}`);
+    console.log(`${err.message}`);
+  });
