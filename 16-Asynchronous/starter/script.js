@@ -110,7 +110,7 @@ TEST COORDINATES 2: -33.933, 18.474
 GOOD LUCK 😀
 */
 
-const whereAmI = (lat, lng) => {
+/* const whereAmI = (lat, lng) => {
   return fetch(
     `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`
   )
@@ -121,18 +121,18 @@ const whereAmI = (lat, lng) => {
     .then(data => {
       console.log(data);
       // const { city, country } = data.address;
-      /*  countriesContainer.insertAdjacentHTML(
-        'beforeend',
-        `You are in ${city}, ${country}`
-      );
-      renderCountry(country); */
+      //  countriesContainer.insertAdjacentHTML(
+      //   'beforeend',
+      //   `You are in ${city}, ${country}`
+      // );
+      // renderCountry(country);
       return data.address;
     })
     .catch(error => {
       console.error(`${error}`);
       renderError(`💥💥💥${error.message}💥💥💥`);
     });
-};
+}; */
 
 /* btn.addEventListener('click', () => {
   whereAmI(52.508, 13.381).then(data => {
@@ -163,7 +163,7 @@ const getPosition = function () {
   });
 };
 
-btn.addEventListener('click', () => {
+/* btn.addEventListener('click', () => {
   getPosition()
     .then(position => {
       // console.log(position);
@@ -175,7 +175,7 @@ btn.addEventListener('click', () => {
       console.log(`You are in ${city}, ${country}`);
       getCountryData(country, `https://restcountries.com/v3.1/name/${country}`);
     });
-});
+}); */
 
 ///////////////////////////////////////
 // Coding Challenge #2
@@ -266,27 +266,35 @@ const wait = function (seconds) {
     images.insertAdjacentHTML('beforeend', `ohhh no 💥💥💥${error.message}`);
   });
  */
-console.log(typeof Promise);
+
+///////////////////////////////////////
+// Simple promise with the Promise constructor
+
+/* console.log(typeof Promise);
 console.log(Promise.prototype);
 // whereAmI is anonymous function
 console.log(typeof whereAmI);
 console.log(whereAmI.prototype);
 console.log(typeof getPosition);
 console.log(getPosition.prototype);
-const testPromise = new Promise(function (resolve, reject) {
-  if (Math.random() > 0.5) {
-    resolve('Congragulation 🎁');
-  } else {
-    reject('Sorry 💥');
-  }
-});
+const testPromise = function () {
+  return new Promise(function (resolve, reject) {
+    setTimeout(() => {
+      if (Math.random() > 0.5) {
+        resolve('Congragulation 🎁');
+      } else {
+        reject(new Error('Sorry 💥'));
+      }
+    }, 3000);
+  });
+};
 
-// console.log(typeof testPromise);
-// console.log(testPromise.prototype);
-testPromise
+console.log(typeof testPromise);
+console.log(testPromise.prototype);
+testPromise()
   .then(res => {
     console.log(res);
-    return testPromise;
+    return testPromise();
   })
   .then(res => {
     console.log(res);
@@ -295,3 +303,52 @@ testPromise
     console.error(`${err}`);
     console.log(`${err.message}`);
   });
+ */
+
+///////////////////////////////////////
+// Consuming Promises with Async/Await
+// Hnadling errors with try...catch()
+const whereAmI = async function () {
+  try {
+    // Geolocation
+    const pos = await getPosition();
+    const { latitude: lat, longitude: lng } = pos.coords;
+
+    // Reverse geolocation
+    const resGeo = await fetch(
+      `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`
+    );
+    if (!resGeo.ok) throw new Error('Position not found');
+
+    const dataObj = await resGeo.json();
+    // console.log(dataObj);
+
+    // const dataGeo = dataObj.address;
+    const dataGeo = { country: 'aaaa' };
+    // Country data
+
+    const res = await fetch(
+      `https://restcountries.com/v3.1/name/${dataGeo.country}`
+    );
+    if (!res.ok) throw new Error(`Problem getting country ${res.status}`);
+    const data = await res.json();
+    if (!data) throw new Error('Country not found');
+    renderCountry(data[0]);
+    return `You are in ${dataGeo.city}, ${dataGeo.country}`;
+  } catch (error) {
+    console.error(`${error} 💥💥`);
+    renderError(`💥💥oh no, ${error.message} 💥💥`);
+    throw error;
+  }
+};
+btn.addEventListener('click', () => {
+  countriesContainer.innerHTML = '';
+  whereAmI()
+    .then(res => {
+      console.log(res);
+    })
+    .catch(error => {
+      console.error(`${error} 💥💥💥💥`);
+      console.log(whereAmI());
+    });
+});
