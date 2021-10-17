@@ -35,7 +35,7 @@ function renderError(errMsg) {
 
 function getJSON(APIurl) {
   return fetch(APIurl).then(response => {
-    console.log(response);
+    // console.log(response);
     if (!response.ok)
       throw new Error(`can not find the country ${response.status}`);
 
@@ -308,7 +308,7 @@ testPromise()
 ///////////////////////////////////////
 // Consuming Promises with Async/Await
 // Hnadling errors with try...catch()
-const whereAmI = async function () {
+/* const whereAmI = async function () {
   try {
     // Geolocation
     const pos = await getPosition();
@@ -351,4 +351,105 @@ btn.addEventListener('click', () => {
       console.error(`${error} 💥💥💥💥`);
       console.log(whereAmI());
     });
-});
+}); */
+
+///////////////////////////////////////
+// Running Promise in Parallel
+/* const get3Countries = async function (c1, c2, c3) {
+  const [data1] = await getJSON(`https://restcountries.com/v3.1/name/${c1}`);
+  const [data2] = await getJSON(`https://restcountries.com/v3.1/name/${c2}`);
+  const [data3] = await getJSON(`https://restcountries.com/v3.1/name/${c3}`);
+
+  console.log(data1.capital[0]);
+  console.log(data2.capital[0]);
+  console.log(data3.capital[0]);
+};
+get3Countries('China', 'Canada', 'USA'); */
+
+// Promise.all()
+const get3Countries = async function (c1, c2, c3) {
+  const data = await Promise.all([
+    getJSON(`https://restcountries.com/v3.1/name/${c1}`),
+    getJSON(`https://restcountries.com/v3.1/name/${c2}`),
+    getJSON(`https://restcountries.com/v3.1/name/${c3}`),
+  ]);
+
+  data.map(d => {
+    console.log(d[0].capital[0]);
+  });
+};
+get3Countries('China', 'Canada', 'USA');
+
+///////////////////////////////////////
+// Other Promise Combinators: race, allSettled and any
+// Promise.race()
+
+(async function (c1 = 'China', c2 = 'Canada', c3 = 'USA') {
+  const data = await Promise.race([
+    getJSON(`https://restcountries.com/v3.1/name/${c1}`),
+    getJSON(`https://restcountries.com/v3.1/name/${c2}`),
+    getJSON(`https://restcountries.com/v3.1/name/${c3}`),
+  ]);
+  console.log(data);
+})();
+
+const timeout = function (sec) {
+  return new Promise((_, reject) => {
+    setTimeout(() => {
+      reject(new Error('Request took too long'));
+    }, sec * 1000);
+  });
+};
+
+Promise.race([getJSON(`https://restcountries.com/v3.1/name/China`), timeout(2)])
+  .then(res => {
+    console.log(res);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+Promise.allSettled([
+  Promise.resolve('Success'),
+  Promise.reject('Error'),
+  Promise.resolve('ANother success '),
+])
+  .then(res => {
+    console.log(res);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+Promise.all([
+  Promise.reject('Error 1'),
+  Promise.reject('Error 2'),
+  Promise.resolve('success '),
+])
+  .then(res => {
+    console.log(res);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+Promise.any([
+  Promise.reject('Error 1'),
+  Promise.reject('Error 2'),
+  Promise.resolve('Another success '),
+])
+  .then(res => {
+    console.log(res);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+Promise.any([
+  Promise.reject('Error 1'),
+  Promise.reject('Error 2'),
+  Promise.reject('Another error '),
+])
+  .then(res => {
+    console.log(res);
+  })
+  .catch(err => {
+    console.log(err);
+  });
