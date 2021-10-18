@@ -474,21 +474,40 @@ GOOD LUCK 😀
 let currentImg;
 const loadNPause = async function (imgPath) {
   currentImg = await createImage(imgPath);
-  console.log(currentImg);
-  await wait(2);
-  currentImg.style.display = 'none';
+  // console.log(currentImg);
+  // await wait(2);
+  // currentImg.style.display = 'none';
+  return currentImg;
 };
 
 // loadNPause(`./img/img-1.jpg`);
 
 const loadAll = async function (imgArr) {
   // for (let index = 0; index < imgArr.length; index++) {
-  //   loadNPause(imgArr[index]);
+  //  createImage(imgArr[index]);
   // }
-  let imgs = [];
-  imgArr.map(async function (imgPath, index) {
-    imgs[index] = await loadNPause(imgPath);
-  });
+  try {
+    /* const imgs = imgArr.map(async imgPath => await createImage(imgPath));
+    console.log(imgs);
+    const imgsEl = await Promise.all(imgs);
+    console.log(imgsEl);
+    imgsEl.forEach(img => {
+      img.classList.add('parallel');
+    }); */
+
+    let imgs = imgArr.map(imgPath => createImage(imgPath));
+    console.log(imgs);
+    const imgsEl = await Promise.all(imgs);
+    console.log(imgsEl);
+    imgsEl.forEach(img => {
+      img.classList.add('parallel');
+    });
+    return imgs;
+  } catch (err) {
+    console.error(err);
+  }
 };
 let imgArr = [`./img/img-1.jpg`, `./img/img-2.jpg`, `./img/img-3.jpg`];
-loadAll(imgArr);
+loadAll(imgArr).then(res => {
+  console.log(res);
+});
