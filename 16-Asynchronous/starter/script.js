@@ -35,7 +35,7 @@ function renderError(errMsg) {
 
 function getJSON(APIurl) {
   return fetch(APIurl).then(response => {
-    console.log(response);
+    // console.log(response);
     if (!response.ok)
       throw new Error(`can not find the country ${response.status}`);
 
@@ -110,28 +110,29 @@ TEST COORDINATES 2: -33.933, 18.474
 GOOD LUCK 😀
 */
 
-const whereAmI = (lat, lng) => {
+/* const whereAmI = (lat, lng) => {
   return fetch(
     `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`
   )
     .then(response => {
-      console.log(response);
+      if (!response.ok) throw new Error('Position not found');
       return response.json();
     })
     .then(data => {
       console.log(data);
       // const { city, country } = data.address;
-      /*  countriesContainer.insertAdjacentHTML(
-        'beforeend',
-        `You are in ${city}, ${country}`
-      );
-      renderCountry(country); */
+      //  countriesContainer.insertAdjacentHTML(
+      //   'beforeend',
+      //   `You are in ${city}, ${country}`
+      // );
+      // renderCountry(country);
       return data.address;
     })
     .catch(error => {
-      console.log(error);
+      console.error(`${error}`);
+      renderError(`💥💥💥${error.message}💥💥💥`);
     });
-};
+}; */
 
 /* btn.addEventListener('click', () => {
   whereAmI(52.508, 13.381).then(data => {
@@ -141,6 +142,41 @@ const whereAmI = (lat, lng) => {
   });
 });
  */
+
+///////////////////////////////////////
+// Promisifying the Geolocation API
+
+/* navigator.geolocation.getCurrentPosition(
+  position => {
+    console.log(position);
+    const { latitude: lat, longitude: lng } = position.coords;
+    console.log(lat, lng);
+  },
+  error => {
+    console.log(error);
+  }
+); */
+
+const getPosition = function () {
+  return new Promise((resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
+
+/* btn.addEventListener('click', () => {
+  getPosition()
+    .then(position => {
+      // console.log(position);
+      const { latitude: lat, longitude: lng } = position.coords;
+      return whereAmI(lat, lng);
+    })
+    .then(data => {
+      const { city, country } = data;
+      console.log(`You are in ${city}, ${country}`);
+      getCountryData(country, `https://restcountries.com/v3.1/name/${country}`);
+    });
+}); */
+
 ///////////////////////////////////////
 // Coding Challenge #2
 
@@ -186,7 +222,7 @@ img.src = imgPath;
 img.addEventListener('load', event => {
   images.appendChild(img);
 }); */
-let currentImg;
+// let currentImg;
 const wait = function (seconds) {
   return new Promise(function (resolve, reject) {
     setTimeout(resolve, seconds * 1000);
@@ -202,7 +238,7 @@ const wait = function (seconds) {
 //     console.log('2s has passed');
 //   });
 
-createImage(`./img/img-1.jpg`)
+/* createImage(`./img/img-1.jpg`)
   .then(img => {
     currentImg = img;
     return wait(2);
@@ -229,3 +265,249 @@ createImage(`./img/img-1.jpg`)
   .catch(error => {
     images.insertAdjacentHTML('beforeend', `ohhh no 💥💥💥${error.message}`);
   });
+ */
+
+///////////////////////////////////////
+// Simple promise with the Promise constructor
+
+/* console.log(typeof Promise);
+console.log(Promise.prototype);
+// whereAmI is anonymous function
+console.log(typeof whereAmI);
+console.log(whereAmI.prototype);
+console.log(typeof getPosition);
+console.log(getPosition.prototype);
+const testPromise = function () {
+  return new Promise(function (resolve, reject) {
+    setTimeout(() => {
+      if (Math.random() > 0.5) {
+        resolve('Congragulation 🎁');
+      } else {
+        reject(new Error('Sorry 💥'));
+      }
+    }, 3000);
+  });
+};
+
+console.log(typeof testPromise);
+console.log(testPromise.prototype);
+testPromise()
+  .then(res => {
+    console.log(res);
+    return testPromise();
+  })
+  .then(res => {
+    console.log(res);
+  })
+  .catch(err => {
+    console.error(`${err}`);
+    console.log(`${err.message}`);
+  });
+ */
+
+///////////////////////////////////////
+// Consuming Promises with Async/Await
+// Hnadling errors with try...catch()
+/* const whereAmI = async function () {
+  try {
+    // Geolocation
+    const pos = await getPosition();
+    const { latitude: lat, longitude: lng } = pos.coords;
+
+    // Reverse geolocation
+    const resGeo = await fetch(
+      `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`
+    );
+    if (!resGeo.ok) throw new Error('Position not found');
+
+    const dataObj = await resGeo.json();
+    // console.log(dataObj);
+
+    // const dataGeo = dataObj.address;
+    const dataGeo = { country: 'aaaa' };
+    // Country data
+
+    const res = await fetch(
+      `https://restcountries.com/v3.1/name/${dataGeo.country}`
+    );
+    if (!res.ok) throw new Error(`Problem getting country ${res.status}`);
+    const data = await res.json();
+    if (!data) throw new Error('Country not found');
+    renderCountry(data[0]);
+    return `You are in ${dataGeo.city}, ${dataGeo.country}`;
+  } catch (error) {
+    console.error(`${error} 💥💥`);
+    renderError(`💥💥oh no, ${error.message} 💥💥`);
+    throw error;
+  }
+};
+btn.addEventListener('click', () => {
+  countriesContainer.innerHTML = '';
+  whereAmI()
+    .then(res => {
+      console.log(res);
+    })
+    .catch(error => {
+      console.error(`${error} 💥💥💥💥`);
+      console.log(whereAmI());
+    });
+}); */
+
+///////////////////////////////////////
+// Running Promise in Parallel
+/* const get3Countries = async function (c1, c2, c3) {
+  const [data1] = await getJSON(`https://restcountries.com/v3.1/name/${c1}`);
+  const [data2] = await getJSON(`https://restcountries.com/v3.1/name/${c2}`);
+  const [data3] = await getJSON(`https://restcountries.com/v3.1/name/${c3}`);
+
+  console.log(data1.capital[0]);
+  console.log(data2.capital[0]);
+  console.log(data3.capital[0]);
+};
+get3Countries('China', 'Canada', 'USA'); */
+
+// Promise.all()
+const get3Countries = async function (c1, c2, c3) {
+  const data = await Promise.all([
+    getJSON(`https://restcountries.com/v3.1/name/${c1}`),
+    getJSON(`https://restcountries.com/v3.1/name/${c2}`),
+    getJSON(`https://restcountries.com/v3.1/name/${c3}`),
+  ]);
+
+  data.map(d => {
+    console.log(d[0].capital[0]);
+  });
+};
+// get3Countries('China', 'Canada', 'USA');
+
+///////////////////////////////////////
+// Other Promise Combinators: race, allSettled and any
+// Promise.race()
+
+/* (async function (c1 = 'China', c2 = 'Canada', c3 = 'USA') {
+  const data = await Promise.race([
+    getJSON(`https://restcountries.com/v3.1/name/${c1}`),
+    getJSON(`https://restcountries.com/v3.1/name/${c2}`),
+    getJSON(`https://restcountries.com/v3.1/name/${c3}`),
+  ]);
+  console.log(data);
+})(); */
+
+const timeout = function (sec) {
+  return new Promise((_, reject) => {
+    setTimeout(() => {
+      reject(new Error('Request took too long'));
+    }, sec * 1000);
+  });
+};
+
+/* Promise.race([getJSON(`https://restcountries.com/v3.1/name/China`), timeout(2)])
+  .then(res => {
+    console.log(res);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+Promise.allSettled([
+  Promise.resolve('Success'),
+  Promise.reject('Error'),
+  Promise.resolve('ANother success '),
+])
+  .then(res => {
+    console.log(res);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+Promise.all([
+  Promise.reject('Error 1'),
+  Promise.reject('Error 2'),
+  Promise.resolve('success '),
+])
+  .then(res => {
+    console.log(res);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+Promise.any([
+  Promise.reject('Error 1'),
+  Promise.reject('Error 2'),
+  Promise.resolve('Another success '),
+])
+  .then(res => {
+    console.log(res);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+Promise.any([
+  Promise.reject('Error 1'),
+  Promise.reject('Error 2'),
+  Promise.reject('Another error '),
+])
+  .then(res => {
+    console.log(res);
+  })
+  .catch(err => {
+    console.log(err);
+  }); */
+
+///////////////////////////////////////
+// Coding Challenge #3
+
+/* 
+PART 1
+Write an async function 'loadNPause' that recreates Coding Challenge #2, this time using async/await (only the part where the promise is consumed). Compare the two versions, think about the big differences, and see which one you like more.
+Don't forget to test the error handler, and to set the network speed to 'Fast 3G' in the dev tools Network tab.
+PART 2
+1. Create an async function 'loadAll' that receives an array of image paths 'imgArr';
+2. Use .map to loop over the array, to load all the images with the 'createImage' function (call the resulting array 'imgs')
+3. Check out the 'imgs' array in the console! Is it like you expected?
+4. Use a promise combinator function to actually get the images from the array 😉
+5. Add the 'paralell' class to all the images (it has some CSS styles).
+TEST DATA: ['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg']. To test, turn off the 'loadNPause' function.
+GOOD LUCK 😀
+*/
+
+let currentImg;
+const loadNPause = async function (imgPath) {
+  currentImg = await createImage(imgPath);
+  // console.log(currentImg);
+  // await wait(2);
+  // currentImg.style.display = 'none';
+  return currentImg;
+};
+
+// loadNPause(`./img/img-1.jpg`);
+
+const loadAll = async function (imgArr) {
+  // for (let index = 0; index < imgArr.length; index++) {
+  //  createImage(imgArr[index]);
+  // }
+  try {
+    /* const imgs = imgArr.map(async imgPath => await createImage(imgPath));
+    console.log(imgs);
+    const imgsEl = await Promise.all(imgs);
+    console.log(imgsEl);
+    imgsEl.forEach(img => {
+      img.classList.add('parallel');
+    }); */
+
+    let imgs = imgArr.map(imgPath => createImage(imgPath));
+    console.log(imgs);
+    const imgsEl = await Promise.all(imgs);
+    console.log(imgsEl);
+    imgsEl.forEach(img => {
+      img.classList.add('parallel');
+    });
+    return imgs;
+  } catch (err) {
+    console.error(err);
+  }
+};
+let imgArr = [`./img/img-1.jpg`, `./img/img-2.jpg`, `./img/img-3.jpg`];
+loadAll(imgArr).then(res => {
+  console.log(res);
+});
