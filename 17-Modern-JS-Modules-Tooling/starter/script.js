@@ -2,7 +2,7 @@
 // Exporting and Importing in ES6 Modules
 
 // Importing module
-import './shoppingCart.js';
+import * as shoppingCart1 from './shoppingCart.js';
 console.log('Importing module');
 // // Scope for this file: Module: cart, totalPrice, tq, addToCart(), default() these variables are existed in this case since they are exposed through the keyword export in the ./shoopingCart.js file
 /* import * as ShoppingCart from './shoppingCart.js';
@@ -40,3 +40,30 @@ add('pizza', 2);
 add('bread', 5);
 add('apples', 5);
 console.log(cart); */
+
+////////////////////////////////////////////////
+// The Module Pattern
+/* const shoppingCart2 = (function () {
+  const cart = [];
+  const shippingCost = 10;
+  const totalPrice = 237;
+  const totalQuantity = 23;
+
+  const addToCart = function (product, quantity) {
+    cart.push({ product, quantity });
+    console.log(`${quantity} ${product} added to cart 2`);
+  };
+
+  const orderStock = function (product, quantity) {
+    console.log(`${quantity} ${product} ordered from supplier`);
+  };
+
+  return { addToCart, cart, totalPrice, totalQuantity };
+})();
+
+console.log(shoppingCart2.totalPrice); */
+
+////////////////////////////////////////////////
+// CommonJS Module
+// Export
+// export.cart2 = shoppingCart1;
