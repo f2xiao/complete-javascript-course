@@ -67,3 +67,30 @@ console.log(shoppingCart2.totalPrice); */
 // CommonJS Module
 // Export
 // export.cart2 = shoppingCart1;
+// Import
+// const {addToCart} = require(`./shoppingCart`)
+
+////////////////////////////////////////////////
+// Introduction to NPM
+// import cloneDeep from `./node_modules/lodash-es/cloneDeep.js`
+/* import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+const state = {
+  cart: [
+    { product: 'pizza', quantity: 2 },
+    { product: 'bread', quantity: 23 },
+  ],
+  user: { loggedIn: true },
+};
+const stateDeepClone = cloneDeep(state);
+const stateClone = Object.assign({}, state);
+console.log(
+  state.user.loggedIn,
+  stateClone.user.loggedIn,
+  stateDeepClone.user.loggedIn
+);
+state.user.loggedIn = false;
+console.log(
+  state.user.loggedIn,
+  stateClone.user.loggedIn,
+  stateDeepClone.user.loggedIn
+); */
