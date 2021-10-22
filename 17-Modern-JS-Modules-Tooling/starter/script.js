@@ -2,7 +2,7 @@
 // Exporting and Importing in ES6 Modules
 
 // Importing module
-import * as shoppingCart1 from './shoppingCart.js';
+import * as shoppingCart from './shoppingCart.js';
 console.log('Importing module');
 // // Scope for this file: Module: cart, totalPrice, tq, addToCart(), default() these variables are existed in this case since they are exposed through the keyword export in the ./shoopingCart.js file
 /* import * as ShoppingCart from './shoppingCart.js';
@@ -72,8 +72,8 @@ console.log(shoppingCart2.totalPrice); */
 
 ////////////////////////////////////////////////
 // Introduction to NPM
-// import cloneDeep from `./node_modules/lodash-es/cloneDeep.js`
-/* import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+// import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+import cloneDeep from 'lodash-es';
 const state = {
   cart: [
     { product: 'pizza', quantity: 2 },
@@ -82,15 +82,16 @@ const state = {
   user: { loggedIn: true },
 };
 const stateDeepClone = cloneDeep(state);
+console.log(stateDeepClone);
 const stateClone = Object.assign({}, state);
 console.log(
   state.user.loggedIn,
   stateClone.user.loggedIn,
-  stateDeepClone.user.loggedIn
+  stateDeepClone['user']
 );
 state.user.loggedIn = false;
-console.log(
-  state.user.loggedIn,
-  stateClone.user.loggedIn,
-  stateDeepClone.user.loggedIn
-); */
+console.log(state, stateClone, stateDeepClone);
+
+if (module.hot) {
+  module.hot.accept();
+}
