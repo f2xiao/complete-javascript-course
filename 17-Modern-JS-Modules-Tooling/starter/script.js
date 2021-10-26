@@ -2,7 +2,7 @@
 // Exporting and Importing in ES6 Modules
 
 // Importing module
-import * as shoppingCart from './shoppingCart.js';
+import { addToCart } from './shoppingCart.js';
 console.log('Importing module');
 // // Scope for this file: Module: cart, totalPrice, tq, addToCart(), default() these variables are existed in this case since they are exposed through the keyword export in the ./shoopingCart.js file
 /* import * as ShoppingCart from './shoppingCart.js';
@@ -95,3 +95,18 @@ console.log(state, stateClone, stateDeepClone);
 if (module.hot) {
   module.hot.accept();
 }
+
+class Person {
+  #greeting = 'Hey';
+  constructor(name) {
+    this.name = name;
+    console.log(`${this.#greeting}, ${this.name}`);
+  }
+}
+const jonas = new Person('Jonas');
+
+Promise.resolve('a').then(res => {
+  console.log(res);
+});
+
+import 'core-js/stable';
