@@ -76,3 +76,40 @@ console.log(main);
 
 // Unpacking values from a regular expression match
 // RegExp.prototype.exec()
+
+//////////////////////////////////////////////////////////////////////
+// Object Destructuring
+
+// Basic assignment
+const { fri: Friday } = restaurant.openingHours;
+console.log(Friday);
+// Assignment without declaration
+// Assigning to new variable names
+// Default values
+// Assigning to new variables names and providing default values
+
+// Unpacking fields from objects passed as a function parameter
+
+// Setting a function parameter's default value
+function drawES2015Chart({
+  size = 'big',
+  cords = { x: 0, y: 0 },
+  radius = 25,
+} = {}) {
+  console.log(size, cords, radius);
+  // do some chart drawing
+}
+drawES2015Chart();
+drawES2015Chart({
+  cords: { x: 18, y: 30 },
+  radius: 30,
+});
+
+let { size = 'big', cords = { x: 0, y: 0 }, radius = 25 } = {};
+console.log(size, cords, radius);
+// Nested object and array destructuring
+const {
+  fri: { open, close },
+} = restaurant.openingHours;
+console.log(open, close);
+// For of iteration and destructuring
