@@ -2,7 +2,7 @@
   "name": "forkify",
   "version": "1.0.0",
   "description": "an application to search for recipes",
-  "source": "src/index.html",
+  "source": "index.html",
   "scripts": {
     "start": "parcel",
     "build": "parcel build"
