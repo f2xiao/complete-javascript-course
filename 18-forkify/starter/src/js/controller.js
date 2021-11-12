@@ -1,3 +1,7 @@
+import * as model from './model.js';
+import recipeView from './recipeView.js';
+import icons from 'url:../img/icons.svg';
+// console.log(icons);
 const recipeContainer = document.querySelector('.recipe');
 
 const timeout = function (s) {
@@ -11,18 +15,29 @@ const timeout = function (s) {
 // https://forkify-api.herokuapp.com/v2
 
 ///////////////////////////////////////
-const obj = {a:1,b:2};
-console.log(obj, typeof obj);
-const showRecipe = async function () {
+const controlRecipes = async function () {
   try {
-    let res = await fetch('https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886'); // returns a response object
-    if(!res.ok) throw new Error(`Something is wrong ${res.status}`); // will stop execution of the code below?
-    const {data} = await res.json(); // parse the response body data from the response object
-    const {recipe} = data;
+    const id = window.location.hash.slice(1);
+    console.log(id);
+
+    // render spinner
+    recipeView.renderSpinner();
+
+    // load recipe
+    await model.loadRecipe(id);
+    let recipe = model.state.recipe;
     console.log(recipe);
-    
+
+    // render recipe
+    recipeView.render(recipe);
   } catch (error) {
-    console.error(`${error} 💥💥💥`);
+    console.error(`${error}`);
   }
-}
-showRecipe();
+};
+
+['hashchange', 'load'].forEach(ev =>
+  window.addEventListener(ev, controlRecipes)
+);
+
+// window.addEventListener('hashchange', showRecipe);
+// window.addEventListener('load', showRecipe);
