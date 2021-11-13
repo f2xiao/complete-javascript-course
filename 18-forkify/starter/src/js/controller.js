@@ -2,6 +2,7 @@ import * as model from './model.js';
 import icons from 'url:../img/icons.svg';
 import recipeView from './recipeView.js';
 import searchView from './searchView.js';
+import resultsView from './resultsView.js';
 // console.log(icons);
 const recipeContainer = document.querySelector('.recipe');
 
@@ -33,15 +34,21 @@ const controlSearchResults = async function () {
   try {
     // get search query
     const query = searchView.getQuery();
-    console.log(query);
+    // console.log(query);
 
     if (!query) return;
     // render spinner
-    recipeView.renderSpinner();
+    resultsView.renderSpinner();
 
     // load search results
+    await model.loadSearchResults(query);
+    console.log(model.state.search.results);
 
     // render search results
+    resultsView.render(model.state.search.results);
+    // model.state.search.results.forEach(element => {
+    //   resultsView.render(element);
+    // });
   } catch (error) {
     searchView.renderError();
     console.error(`${error}`);

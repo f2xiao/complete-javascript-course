@@ -10,12 +10,12 @@ class RecipeView extends View {
     ['hashchange', 'load'].forEach(ev => window.addEventListener(ev, handler));
   }
 
-  _generateMarkup(data) {
+  _generateMarkup() {
     return `
         <figure class="recipe__fig">
-        <img src="${data.image}" alt="Tomato" class="recipe__img" />
+        <img src="${this._data.image}" alt="Tomato" class="recipe__img" />
         <h1 class="recipe__title">
-          <span>${data.title}</span>
+          <span>${this._data.title}</span>
         </h1>
         </figure>
         
@@ -25,7 +25,7 @@ class RecipeView extends View {
             <use href="src/img/icons.svg#icon-clock"></use>
           </svg>
           <span class="recipe__info-data recipe__info-data--minutes">${
-            data.cookingTime
+            this._data.cookingTime
           }</span>
           <span class="recipe__info-text">minutes</span>
         </div>
@@ -34,7 +34,7 @@ class RecipeView extends View {
             <use href="src/img/icons.svg#icon-users"></use>
           </svg>
           <span class="recipe__info-data recipe__info-data--people">${
-            data.servings
+            this._data.servings
           }</span>
           <span class="recipe__info-text">servings</span>
         
@@ -67,7 +67,7 @@ class RecipeView extends View {
             <h2 class="heading--2">Recipe ingredients</h2>
             <ul class="recipe__ingredient-list">
         
-        ${data.ingredients
+        ${this._data.ingredients
           .map(
             ing => `
               <li class="recipe__ingredient">
@@ -93,13 +93,13 @@ class RecipeView extends View {
             <p class="recipe__directions-text">
               This recipe was carefully designed and tested by
               <span class="recipe__publisher">${
-                data.publisher
+                this._data.publisher
               }</span>. Please check out
               directions at their website.
             </p>
             <a
               class="btn--small recipe__btn"
-              href="${data.sourceUrl}"
+              href="${this._data.sourceUrl}"
               target="_blank"
             >
               <span>Directions</span>
