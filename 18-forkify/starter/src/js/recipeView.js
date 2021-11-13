@@ -1,57 +1,13 @@
 import icons from 'url:../img/icons.svg';
+import View from './View';
 import { Fraction } from 'fractional';
-class RecipeView {
-  #data;
-  #parentEl = document.querySelector('.recipe');
-  #errorMessage = `No recipes found for your query. Please try again!`;
-  #message = '';
+class RecipeView extends View {
+  _parentEl = document.querySelector('.recipe');
+  _errorMessage = `No recipes found for your query. Please try again!`;
+  _message = '';
 
   addHandlerRender(handler) {
     ['hashchange', 'load'].forEach(ev => window.addEventListener(ev, handler));
-  }
-  render(data) {
-    this.#data = data;
-    const markup = this._generateMarkup(data);
-    this._clear();
-    this.#parentEl.insertAdjacentHTML('afterbegin', markup);
-  }
-
-  renderError(error = this.#errorMessage) {
-    const markup = `<div class="error">
-    <div>
-      <svg>
-        <use href="${icons}#icon-alert-triangle"></use>
-      </svg>
-    </div>
-    <p>${error}</p>
-  </div>`;
-    this._clear();
-    this.#parentEl.insertAdjacentHTML('afterbegin', markup);
-  }
-  renderMessage(message = this.#message) {
-    const markup = `<div class="message">
-    <div>
-      <svg>
-        <use href="${icons}#icon-smile"></use>
-      </svg>
-    </div>
-    <p>${message}</p>
-  </div>`;
-    this._clear();
-    this.#parentEl.insertAdjacentHTML('afterbegin', markup);
-  }
-
-  renderSpinner() {
-    let markup = `<div class="spinner">
-        <svg>
-          <use href="${icons}#icon-loader"></use>
-        </svg>
-      </div>`;
-    this._clear();
-    this.#parentEl.insertAdjacentHTML('afterbegin', markup);
-  }
-  _clear() {
-    this.#parentEl.innerHTML = '';
   }
 
   _generateMarkup(data) {

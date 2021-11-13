@@ -1,6 +1,4 @@
-15739
-123C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\caniuse-lite\data\features\css-opacity.js121436361000000000 0
-96C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\balanced-match132804366736585270 1
+15741
 90C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\asynckit132804366710353911 1
 109C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\lodash\sortedLastIndexBy.js121436361000000000 0
 92C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\terser\lib132804366513835704 1
@@ -91,7 +89,7 @@
 120C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\http-proxy-middleware\dist\router.d.ts121436361000000000 0
 125C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\@babel\core\lib\transformation\file\file.js121012626000000000 0
 111C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\core-js\es\instance\repeat.js121436361000000000 0
-73C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\dist132812127263138219 1
+73C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\dist132812927618429472 1
 110C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\msgpackr-extract\.travis.yml121436361000000000 0
 93C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\es-abstract132804366714576963 1
 131C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\jsdom\lib\jsdom\living\generated\ScrollOptions.js121436361000000000 0
@@ -168,6 +166,18 @@
 96C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\path-is-inside132804366725329954 1
 102C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\wcwidth\combining.js130443204920000000 0
 92C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\acorn-walk132804366710287433 1
+126C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\bl\node_modules\readable-stream\lib\internal132804366455505490 1
+89C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\core-js132804366735679241 1
+96C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\buffer\LICENSE121436361000000000 0
+112C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\type-fest\source\asyncify.d.ts121436361000000000 0
+103C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\parse-asn1\fixProc.js121436361000000000 0
+155C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\postcss-modules-extract-imports\node_modules\color-convert\conversions.js121436361000000000 0
+117C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\highlight.js\styles\kimbie.dark.css121436361000000000 0
+132C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\fast-url-parser\node_modules\punycode\package.json132804366731201956 0
+108C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\postcss-minify-font-values132804366723855683 1
+117C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\@parcel\runtime-browser-hmr\LICENSE121436361000000000 0
+85C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\nan132804366726635100 1
+89C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\src\js\searchView.js132812927327449037 0
 120C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\es-abstract\2020\ArraySpeciesCreate.js121436361000000000 0
 100C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\msgpackr\unpack.js121436361000000000 0
 115C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\@babel\traverse\lib\path\index.js121012626000000000 0
@@ -181,7 +191,7 @@
 119C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\stream-browserify\.github\FUNDING.yml121436361000000000 0
 123C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\highlight.js\lib\languages\mojolicious.js121436361000000000 0
 99C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\commander\LICENSE121436361000000000 0
-79C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\index.html132812048298160202 0
+79C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\index.html132812917387172728 0
 106C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\string.prototype.trimend132804366719765074 1
 112C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\@parcel\cache\lib\LMDBCache.js121436361000000000 0
 115C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\@parcel\runtime-react-refresh\lib132804366419453593 1
@@ -194,7 +204,7 @@
 76C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\src\img132782631816697368 1
 137C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\jsdom\lib\jsdom\living\generated\HTMLOptGroupElement.js121436361000000000 0
 133C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\jsdom\lib\jsdom\living\generated\HTMLSpanElement.js121436361000000000 0
-75C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\src\js132812052942407545 1
+75C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\src\js132812903680531428 1
 90C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\css-tree132804366720392364 1
 119C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\@nodelib\fs.walk\out\readers\async.js121436361000000000 0
 117C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\postcss-normalize-url\dist\index.js121436361000000000 0
@@ -203,7 +213,7 @@
 100C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\lodash\toFinite.js121436361000000000 0
 109C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\is-binary-path\package.json132804366729177661 0
 107C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\xmlchars\xml\1.0\ed4.d.ts121436361000000000 0
-89C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\src\js\controller.js132812121336138933 0
+89C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\src\js\controller.js132812924525624964 0
 77C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\src\sass132782631816739097 1
 122C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\core-js\modules\esnext.iterator.every.js121436361000000000 0
 92C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\extsprintf132804366731621766 1
@@ -322,7 +332,7 @@
 94C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\terser\tools132804366518746994 1
 97C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\lodash\times.js121436361000000000 0
 120C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\core-js\modules\esnext.map.group-by.js121436361000000000 0
-84C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\src\js\model.js132812122967239774 0
+84C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\src\js\model.js132812917358267546 0
 100C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\reusify\benchmarks132804366501803479 1
 127C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\@parcel\core\test\fixtures\library-scopehoist132804366581275356 1
 100C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\purgecss\README.md121436361000000000 0
@@ -344,9 +354,15 @@
 120C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\core-js\features\typed-array\reduce.js121436361000000000 0
 114C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\verror\node_modules\core-util-is132804366715122200 1
 123C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\es-abstract\2019\DeletePropertyOrThrow.js121436361000000000 0
-89C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\src\js\recipeView.js132812127350834534 0
+89C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\src\js\recipeView.js132812927529557114 0
 128C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\es-abstract\2019\CompletePropertyDescriptor.js121436361000000000 0
 93C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\cosmiconfig132804366712675445 1
+100C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\lodash\isNative.js121436361000000000 0
+132C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\@babel\types\lib\modifications\removeProperties.js121012626000000000 0
+129C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\@parcel\transformer-json\node_modules\json5\lib132804366546019228 1
+100C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\chalk\package.json132804366719281700 0
+83C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\src\js\View.js132812927841362080 0
+106C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\is-weakref\.eslintignore121436361000000000 0
 114C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\yaml\dist\PlainValue-ec8e588e.js121436361000000000 0
 115C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\highlight.js\lib\languages\awk.js121436361000000000 0
 94C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\.bin\ejs.ps1132804366739447237 0
@@ -390,7 +406,7 @@
 98C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\lodash\sortBy.js121436361000000000 0
 120C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\core-js\internals\internal-metadata.js121436361000000000 0
 85C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\src\img\logo.png132782631816697368 0
-91C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\dist\index.05cf099e.js132812127263104617 0
+91C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\dist\index.05cf099e.js132812927618396395 0
 112C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\w3c-hr-time\lib\performance.js132279277550000000 0
 103C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\prelude-ls\lib\Obj.js130761311190000000 0
 114C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\public-encrypt\privateDecrypt.js121436361000000000 0
@@ -565,6 +581,8 @@
 141C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\split2\node_modules\readable-stream\lib\_stream_readable.js121436361000000000 0
 99C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\lodash\fp\each.js121436361000000000 0
 104C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\available-typed-arrays132804366736617143 1
+123C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\caniuse-lite\data\features\css-opacity.js121436361000000000 0
+96C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\balanced-match132804366736585270 1
 130C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\core-js\proposals\efficient-64-bit-arithmetic.js121436361000000000 0
 85C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\has132804366731215863 1
 128C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\@babel\traverse\node_modules\debug\src\node.js121436361000000000 0
@@ -850,17 +868,6 @@
 99C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\lodash\bindAll.js121436361000000000 0
 118C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\http-proxy-middleware\dist\errors.js121436361000000000 0
 93C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\string-hash132804366719760078 1
-126C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\bl\node_modules\readable-stream\lib\internal132804366455505490 1
-89C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\core-js132804366735679241 1
-96C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\buffer\LICENSE121436361000000000 0
-112C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\type-fest\source\asyncify.d.ts121436361000000000 0
-103C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\parse-asn1\fixProc.js121436361000000000 0
-155C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\postcss-modules-extract-imports\node_modules\color-convert\conversions.js121436361000000000 0
-117C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\highlight.js\styles\kimbie.dark.css121436361000000000 0
-132C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\fast-url-parser\node_modules\punycode\package.json132804366731201956 0
-108C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\postcss-minify-font-values132804366723855683 1
-117C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\@parcel\runtime-browser-hmr\LICENSE121436361000000000 0
-85C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\nan132804366726635100 1
 94C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\core-util-is132804366735686504 1
 108C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\uncss\node_modules\postcss132804366717909902 1
 107C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\vm-browserify\.travis.yml121436361000000000 0
@@ -1964,7 +1971,6 @@
 92C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\nullthrows132804366726261867 1
 115C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\@parcel\optimizer-image\native.js121436361000000000 0
 95C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\object.assign132804366726196395 1
-155C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\uncss\node_modules\postcss-selector-parser\dist\selectors\constructors.js121436361000000000 0
 124C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\es-abstract\2021\FromPropertyDescriptor.js121436361000000000 0
 89C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\onetime132804366726125691 1
 126C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\@parcel\workers\lib\process\ProcessWorker.js121436361000000000 0
@@ -1999,8 +2005,8 @@
 102C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\css-select\README.md121436361000000000 0
 98C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\parseurl\LICENSE121436361000000000 0
 103C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\posthtml-parser\.c8rc121436361000000000 0
-95C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\os-browserify132804366726103083 1
 88C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\wrappy132804366714475899 1
+95C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\os-browserify132804366726103083 1
 105C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\randombytes\.travis.yml121436361000000000 0
 100C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\lodash\findLast.js121436361000000000 0
 102C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\lodash\fp\attempt.js121436361000000000 0
@@ -3452,8 +3458,6 @@
 105C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\type-fest\ts41\get.d.ts121436361000000000 0
 132C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\caniuse-lite\data\features\alternate-stylesheet.js121436361000000000 0
 131C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\uncss\node_modules\postcss-selector-parser\API.md121436361000000000 0
-152C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\uncss\node_modules\postcss-selector-parser\dist\selectors\container.js121436361000000000 0
-106C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\msgpackr-extract\LICENSE121436361000000000 0
 153C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\uncss\node_modules\postcss-selector-parser\postcss-selector-parser.d.ts121436361000000000 0
 129C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\jsdom\lib\jsdom\living\nodes\ParentNode-impl.js121436361000000000 0
 146C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\postcss-modules\node_modules\postcss-modules-extract-imports\src132804366480978740 1
@@ -3538,6 +3542,9 @@
 152C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\uncss\node_modules\postcss-selector-parser\dist\selectors\attribute.js121436361000000000 0
 134C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\@babel\types\lib\retrievers\getBindingIdentifiers.js121012626000000000 0
 150C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\uncss\node_modules\postcss-selector-parser\dist\selectors\comment.js121436361000000000 0
+155C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\uncss\node_modules\postcss-selector-parser\dist\selectors\constructors.js121436361000000000 0
+152C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\uncss\node_modules\postcss-selector-parser\dist\selectors\container.js121436361000000000 0
+106C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\msgpackr-extract\LICENSE121436361000000000 0
 110C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\core-js\es\array\includes.js121436361000000000 0
 120C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\posthtml-parser\dist\chunk.T6SARJYH.js121436361000000000 0
 149C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\uncss\node_modules\postcss-selector-parser\dist\selectors\guards.js121436361000000000 0
@@ -4365,7 +4372,7 @@
 126C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\purgecss\node_modules\commander\CHANGELOG.md121436361000000000 0
 102C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\string-width\license121436361000000000 0
 113C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\highlight.js\lib\languages\q.js121436361000000000 0
-91C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\dist\logo.c833fbb6.png132812050077154810 0
+91C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\dist\logo.c833fbb6.png132812925542982318 0
 112C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\core-js\features\array\find.js121436361000000000 0
 96C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\lodash\bind.js121436361000000000 0
 113C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\jsdom\lib\jsdom\level2\style.js121436361000000000 0
@@ -4495,11 +4502,10 @@
 141C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\postcss-modules-local-by-default\node_modules\color-convert132804366724489833 1
 150C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\stream-browserify\node_modules\readable-stream\lib\_stream_duplex.js121436361000000000 0
 118C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\highlight.js\lib\languages\autoit.js121436361000000000 0
-92C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\dist\icons.b3083592.svg132812050077159813 0
+92C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\dist\icons.b3083592.svg132812925542734295 0
 117C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\css-tree\lib\common\adopt-buffer.js121436361000000000 0
 152C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\stream-browserify\node_modules\readable-stream\lib\_stream_readable.js121436361000000000 0
 138C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\jsdom\lib\jsdom\living\nodes\HTMLTextAreaElement-impl.js121436361000000000 0
-113C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\es-abstract\2019\ToPrimitive.js121436361000000000 0
 109C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\ajv\lib\dotjs\multipleOf.js121436361000000000 0
 152C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\stream-browserify\node_modules\readable-stream\lib\_stream_writable.js121436361000000000 0
 108C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\picocolors\picocolors.d.ts121436361000000000 0
@@ -4802,7 +4808,7 @@
 105C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\queue-microtask\LICENSE121436361000000000 0
 96C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\sha.js\LICENSE132804366488990954 0
 131C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\jsdom\lib\jsdom\living\helpers\dates-and-times.js121436361000000000 0
-94C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\dist\favicon.f563d3c3.png132812050077085299 0
+94C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\dist\favicon.f563d3c3.png132812925542408751 0
 141C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\@parcel\watcher\prebuilds\darwin-arm64\node.napi.glibc.node121436361000000000 0
 134C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\lmdb-store\dependencies\lmdb\libraries\liblmdb\mdb.c121436361000000000 0
 107C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\lodash\fp\assignInWith.js121436361000000000 0
@@ -5618,8 +5624,6 @@
 102C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\lodash\fp\isArray.js121436361000000000 0
 130C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\postcss-normalize-timing-functions\dist\index.js121436361000000000 0
 151C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\postcss-modules-extract-imports\node_modules\postcss\lib\postcss.d.ts121436361000000000 0
-116C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\core-js\es\number\virtual\index.js121436361000000000 0
-110C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\es-abstract\2019\ToObject.js121436361000000000 0
 119C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\postcss-normalize-string\CHANGELOG.md121436361000000000 0
 111C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\postcss-normalize-string\dist132804366507691695 1
 118C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\postcss-normalize-string\LICENSE-MIT121436361000000000 0
@@ -7156,8 +7160,8 @@
 97C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\ncp\test\ncp.js130614920630000000 0
 107C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\core-js\es\instance\at.js121436361000000000 0
 115C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\elliptic\lib\elliptic\ec\index.js121436361000000000 0
-102C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\lodash\propertyOf.js121436361000000000 0
 107C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\ncp\test\regular-fixtures132804366535903133 1
+102C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\lodash\propertyOf.js121436361000000000 0
 118C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\highlight.js\styles\color-brewer.css121436361000000000 0
 115C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\ncp\test\symlink-fixtures\src\foo130614920630000000 0
 108C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\events\.github\FUNDING.yml121436361000000000 0
@@ -7619,7 +7623,6 @@
 108C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\har-schema\lib\header.json131370181680000000 0
 99C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\lodash\isMatch.js121436361000000000 0
 103C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\lodash\isMatchWith.js121436361000000000 0
-100C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\lodash\isNative.js121436361000000000 0
 97C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\lodash\isNil.js121436361000000000 0
 106C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\har-schema\lib\page.json131370181680000000 0
 115C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\highlight.js\lib\languages\tcl.js121436361000000000 0
@@ -9551,10 +9554,6 @@
 122C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\@parcel\babel-ast-utils\src\generator.js121436361000000000 0
 97C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\isarray\test.js130942154450000000 0
 98C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\is-wsl\readme.md121436361000000000 0
-132C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\@babel\types\lib\modifications\removeProperties.js121012626000000000 0
-129C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\@parcel\transformer-json\node_modules\json5\lib132804366546019228 1
-100C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\chalk\package.json132804366719281700 0
-106C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\is-weakref\.eslintignore121436361000000000 0
 100C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\is-weakref\.github132804366553529962 1
 123C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\core-js\modules\esnext.array.last-item.js121436361000000000 0
 103C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\ecc-jsbn\package.json132804366721737113 0
@@ -11211,6 +11210,9 @@
 129C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\css-modules-loader-core\node_modules\ansi-regex132804366735775133 1
 108C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\es-abstract\2019\ToInt8.js121436361000000000 0
 110C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\es-abstract\2019\ToNumber.js121436361000000000 0
+116C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\core-js\es\number\virtual\index.js121436361000000000 0
+110C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\es-abstract\2019\ToObject.js121436361000000000 0
+113C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\es-abstract\2019\ToPrimitive.js121436361000000000 0
 115C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\es-abstract\2019\ToPropertyKey.js121436361000000000 0
 110C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\es-abstract\2019\ToUint32.js121436361000000000 0
 97C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\braces\index.js121436361000000000 0
@@ -11703,7 +11705,7 @@
 117C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\elliptic\lib\elliptic\curve\mont.js121436361000000000 0
 115C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\electron-to-chromium\CHANGELOG.md121436361000000000 0
 123C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\electron-to-chromium\chromium-versions.js121436361000000000 0
-92C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\dist\index.612625cb.css132812050077085299 0
+92C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\dist\index.612625cb.css132812925536704345 0
 111C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\core-js\es\typed-array\set.js121436361000000000 0
 128C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\electron-to-chromium\full-chromium-versions.js121436361000000000 0
 119C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\electron-to-chromium\full-versions.js121436361000000000 0
@@ -14300,7 +14302,7 @@
 125C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\caniuse-lite\data\features\selection-api.js121436361000000000 0
 124C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\caniuse-lite\data\features\setimmediate.js121436361000000000 0
 117C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\caniuse-lite\data\features\sha-2.js121436361000000000 0
-84C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\dist\index.html132812050077154810 0
+84C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\dist\index.html132812925543112828 0
 121C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\caniuse-lite\data\features\shadowdom.js121436361000000000 0
 122C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\@babel\types\lib\comments\addComments.js121012626000000000 0
 123C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\caniuse-lite\data\features\shadowdomv1.js121436361000000000 0
@@ -15734,7 +15736,7 @@
 97C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\.bin\terser.cmd132804366740869100 0
 97C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\.bin\terser.ps1132804366740869100 0
 96C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\node_modules\.bin\which.cmd132804366741393006 0
-92C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\dist\icons.e7078503.svg132812050077154810 0
-95C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\dist\index.05cf099e.js.map132812127263125193 0
+92C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\dist\icons.e7078503.svg132812925543103054 0
+95C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\dist\index.05cf099e.js.map132812927618422330 0
 95C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\dist\index.430fc437.js.map132804545583546641 0
-96C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\dist\index.612625cb.css.map132812050077241530 0
+96C:\Users\fangf\backend\complete-javascript-course\18-forkify\starter\dist\index.612625cb.css.map132812925536744734 0
