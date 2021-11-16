@@ -4,7 +4,9 @@ export const state = {
   recipe: {},
   search: {
     query: '',
+    page: 1,
     results: [],
+    resultsPerPage: 10,
   },
 };
 
@@ -51,6 +53,14 @@ export const loadSearchResults = async function (query) {
     // throw error;
     console.error(error.message);
   }
+};
+
+export const getSearchResultsPerPage = function (page = state.search.page) {
+  state.search.page = page;
+  const start = (page - 1) * state.search.resultsPerPage;
+  const end = page * state.search.resultsPerPage - 1;
+  console.log(start, end);
+  return state.search.results.slice(start, end);
 };
 
 /* loadSearchResults('pizza');

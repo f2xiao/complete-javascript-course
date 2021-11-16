@@ -3,6 +3,7 @@ import icons from 'url:../img/icons.svg';
 import recipeView from './recipeView.js';
 import searchView from './searchView.js';
 import resultsView from './resultsView.js';
+import paginationView from './paginationView.js';
 // console.log(icons);
 const recipeContainer = document.querySelector('.recipe');
 
@@ -45,24 +46,27 @@ const controlSearchResults = async function () {
     console.log(model.state.search.results);
 
     // render search results
-    resultsView.render(model.state.search.results);
-    // model.state.search.results.forEach(element => {
-    //   resultsView.render(element);
-    // });
+    resultsView.render(model.getSearchResultsPerPage());
+
+    // render pagination button
+    paginationView.render(model.state.search);
   } catch (error) {
     searchView.renderError();
     console.error(`${error}`);
   }
 };
 
-// ['hashchange', 'load'].forEach(ev =>
-//   window.addEventListener(ev, controlRecipes)
-// );
+const controlPagination = function (goToPage) {
+  // render search results
+  resultsView.render(model.getSearchResultsPerPage(goToPage));
+
+  // render pagination button
+  paginationView.render(model.state.search);
+};
 
 const init = function () {
   recipeView.addHandlerRender(controlRecipes);
   searchView.addHandlerRender(controlSearchResults);
+  paginationView.addHandlerClick(controlPagination);
 };
 init();
-// window.addEventListener('hashchange', showRecipe);
-// window.addEventListener('load', showRecipe);
